@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config/config.env' });
 
 // API Routes
+// ** Don't forget to remove the route below once official API routes are entered
 server.get('/', (req, res) => {
   res.send({ msg: `Welcome to the kbTracker API!` });
 });
