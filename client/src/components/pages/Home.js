@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavBar, Header } from '../../components/';
+import { NavBar, Header } from '../../components/Home';
+// import Header from '../../components/Home/Header';
 
 const Home = () => {
   return (

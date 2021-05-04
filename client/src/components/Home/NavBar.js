@@ -8,6 +8,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+
+// Custom components
+import { NavLinks } from '../Home';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  nav_bar: {
+    backgroundColor: 'black',
+  },
 }));
 
 const NavBar = () => {
@@ -26,7 +33,7 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.nav_bar}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -36,9 +43,10 @@ const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6">
-            Kettlebell Trainer
+          <Typography className={classes.title} variant="h4">
+            <FitnessCenterIcon fontSize="large" /> Kettlebell Trainer
           </Typography>
+          <NavLinks />
         </Toolbar>
       </AppBar>
     </div>
