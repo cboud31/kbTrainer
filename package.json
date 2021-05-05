@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "server:dev": "nodemon server.js",
-    "db:build": "node ./db/init_db.js"
+    "client:dev": "npm start --prefix client",
+    "db:build": "node ./db/init_db.js",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\" "
   },
   "keywords": [],
   "author": "",
