@@ -13,13 +13,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   nav_link: {
-    font: 'white',
     paddingTop: '1rem',
     paddingBottom: '1rem',
     paddingLeft: '1.25rem',
+    textDecoration: 'none',
   },
   link: {
     color: 'white',
+    underline: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+      color: 'yellow',
+    },
   },
 }));
 
@@ -30,7 +35,12 @@ const NavLinks = () => {
     <div className={classes.nav_links}>
       {/* !isLoggedIn ? Home : Dashboard */}
       <Typography className={classes.nav_link}>
-        <Link className={classes.link} href="#" onClick={() => {}}>
+        <Link
+          underlineNone
+          className={classes.link}
+          href="#"
+          onClick={() => {}}
+        >
           Home
         </Link>
       </Typography>
