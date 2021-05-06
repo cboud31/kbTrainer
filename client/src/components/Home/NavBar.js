@@ -57,6 +57,7 @@ const NavBar = () => {
       <AppBar position="static" className={classes.nav_bar}>
         <Toolbar>
           <Typography className={classes.title}>
+            {/* !! Turn the logo img into a link to the Landing Page !! */}
             <img className={classes.logo} src={logo} alt="logo" />
           </Typography>
           {matches ? <DrawerMenu /> : <NavLinks />}

@@ -18,6 +18,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
 import CreateIcon from '@material-ui/icons/Create';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import SendIcon from '@material-ui/icons/Send';
+import InfoIcon from '@material-ui/icons/Info';
+import Info from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +48,8 @@ const DrawerMenu = () => {
     { name: 'Home', path: '/', icon: <HomeIcon /> },
     { name: 'Exercises', path: '/exercises', icon: <FitnessCenterIcon /> },
     { name: 'Routines', path: '/routines', icon: <FormatListNumberedIcon /> },
+    { name: 'About', icon: <InfoIcon /> },
+    { name: 'Contact', icon: <SendIcon /> },
     { name: 'Register', path: '/register', icon: <CreateIcon /> },
     { name: 'Login', path: '/login', icon: <VpnKeyIcon /> },
   ];

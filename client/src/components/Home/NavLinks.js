@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   link: {
+    fontFamily: 'Open Sans',
+    textDecoration: 'bold',
     color: 'white',
     underline: 'none',
     '&:hover': {
@@ -34,16 +36,7 @@ const NavLinks = () => {
   return (
     <div className={classes.nav_links}>
       {/* !isLoggedIn ? Home : Dashboard */}
-      <Typography className={classes.nav_link}>
-        <Link
-          underlineNone
-          className={classes.link}
-          href="#"
-          onClick={() => {}}
-        >
-          Home
-        </Link>
-      </Typography>
+      {/* <Typography className={classes.nav_link}></Typography> */}
       <Typography className={classes.nav_link}>
         <Link className={classes.link} href="#" onClick={() => {}}>
           Routines
@@ -52,6 +45,16 @@ const NavLinks = () => {
       <Typography className={classes.nav_link}>
         <Link className={classes.link} href="#" onClick={() => {}}>
           Exercises
+        </Link>
+      </Typography>
+      <Typography className={classes.nav_link}>
+        <Link className={classes.link} href="#" onClick={() => {}}>
+          About
+        </Link>
+      </Typography>
+      <Typography className={classes.nav_link}>
+        <Link className={classes.link} href="#" onClick={() => {}}>
+          Contact
         </Link>
       </Typography>
       {/* !isLoggedIn ? Register/ Login : Logout */}
