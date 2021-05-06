@@ -6,7 +6,16 @@ const server = express();
 const dotenv = require('dotenv');
 dotenv.config({ path: './config/config.env' });
 
+// Morgan middleware to log all requests.
+const morgan = require('morgan');
+server.use(morgan('dev'));
+
+// Use bodyparser to handle json requests.
+const bodyParser = require('body-parser');
+server.use(bodyParser.json());
+
 // API Routes
+server.use('/api/exercises', require('./routes/exercises'));
 // ** Don't forget to remove the route below once official API routes are entered
 server.get('/', (req, res) => {
   res.send({ msg: `Welcome to the kbTracker API!` });
