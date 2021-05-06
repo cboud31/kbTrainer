@@ -1,10 +1,12 @@
 import React from 'react';
-import { NavBar } from '../../components/';
+import { NavBar, Header } from '../../components/Home';
+// import Header from '../../components/Home/Header';
 
 const Home = () => {
   return (
     <div>
       <NavBar />
+      <Header />
     </div>
   );
 };
