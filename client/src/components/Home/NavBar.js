@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '/Users/CoryB/Desktop/2021_codingProjects/kbTrainer/client/src/components/Screen Shot 2021-05-05 at 9.23.37 PM.png';
 
 // Material U-I imports
 import { makeStyles } from '@material-ui/core/styles';
@@ -36,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
   nav_bar: {
     backgroundColor: 'black',
   },
+  logo: {
+    height: '20%',
+    width: '25%',
+    paddingTop: '.25rem',
+  },
 }));
 
 const NavBar = () => {
@@ -46,25 +52,12 @@ const NavBar = () => {
   // [x] Save NavLinks in a variable (already saved as a component)
   // [x] Create matches variable above.
 
-  const menu = (
-    <>
-      <IconButton
-        edge="start"
-        className={classes.menuButton}
-        color="inherit"
-        aria-label="menu"
-      >
-        <MenuIcon />
-      </IconButton>
-    </>
-  );
-
   return (
-    <div className={classes.root}>
+    <div className={classes.root} alignItems="center">
       <AppBar position="static" className={classes.nav_bar}>
         <Toolbar>
           <Typography className={classes.title}>
-            <FitnessCenterIcon fontSize="large" /> Kettlebell Trainer
+            <img className={classes.logo} src={logo} alt="logo" />
           </Typography>
           {matches ? <DrawerMenu /> : <NavLinks />}
           {/* Ternary to render NavLinks or Drawer */}
@@ -75,3 +68,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+{
+  /* <img className={classes.logo} src={logo} alt="logo" /> */
+}
