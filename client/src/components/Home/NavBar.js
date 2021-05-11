@@ -53,7 +53,7 @@ const NavBar = () => {
   // [x] Create matches variable above.
 
   return (
-    <div className={classes.root} alignItems="center">
+    <div className={classes.root}>
       <AppBar position="static" className={classes.nav_bar}>
         <Toolbar>
           <Typography className={classes.title}>
