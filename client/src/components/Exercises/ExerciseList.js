@@ -7,14 +7,12 @@ const ExerciseList = (props) => {
     {
       exerciseID: 1,
       title: 'One-Arm Kettlebell Swing',
-      videoURL:
-        'https://www.youtube.com/watch?v=0L0cOOpyPpA&list=PLGGOclTSYWJgrdDnOLctzLvOUiHsEPsP0&index=4&t=4s',
+      videoURL: 'https://www.youtube.com/watch?v=0L0cOOpyPpA',
     },
     {
       exerciseID: 2,
-      title: 'Turkish Get-Up',
-      videoURL:
-        'https://www.youtube.com/watch?v=SpN-wEogszg&list=PLGGOclTSYWJgrdDnOLctzLvOUiHsEPsP0&index=1&t=67s',
+      title: 'Turkish Get Down',
+      videoURL: 'https://www.youtube.com/watch?v=8Qb5IIcaTG8',
     },
     {
       exerciseID: 3,
@@ -24,7 +22,7 @@ const ExerciseList = (props) => {
   ];
 
   return (
-    <div className="ExerciseList">
+    <div className="exercise-list">
       {exercises.map((exercise) => {
         console.log(exercise);
         return (
