@@ -43,7 +43,7 @@ const NavLinks = () => {
         </Link>
       </Typography>
       <Typography className={classes.nav_link}>
-        <Link className={classes.link} href="#" onClick={() => {}}>
+        <Link className={classes.link} href="/exercises" onClick={() => {}}>
           Exercises
         </Link>
       </Typography>
