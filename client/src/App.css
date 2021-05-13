@@ -1,7 +1,18 @@
-.App {
-  /* text-align: center; */
+html {
+  height: 100%;
+  margin: 0px;
+  background: linear-gradient(0deg, #00000088 100%, #ffffff44 100%),
+    url(/Users/CoryB/Desktop/2021_codingProjects/kbTrainer/client/src/components/disciplines-kettlebell.jpeg)
+      no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* body {
+  
   background: linear-gradient(0deg, #00000088 100%, #ffffff44 100%),
     url(/Users/CoryB/Desktop/2021_codingProjects/kbTrainer/client/src/components/disciplines-kettlebell.jpeg);
-  height: 100vh;
-  width: 100vw;
-}
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
+} */

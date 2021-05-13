@@ -1,10 +1,10 @@
 import React from 'react';
-import { ExerciseList } from '../../components/Exercises';
+import { Exercise } from '../../components/Exercises';
 
 const Exercises = () => {
   return (
     <div>
-      <ExerciseList />
+      <Exercise />
     </div>
   );
 };
