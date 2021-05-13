@@ -8,11 +8,17 @@ import { useTheme } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionActions from '@material-ui/core/AccordionActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Box } from '@material-ui/core';
 
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+import ListItem from '@material-ui/core/ListItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
     margin: '0 auto',
     marginTop: '2rem',
+    marginBottom: '2rem',
   },
   rootMobile: {
     width: '99vw',
@@ -37,23 +44,29 @@ const useStyles = makeStyles((theme) => ({
   },
   accordion: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignContent: 'center',
   },
   details: {
-    flexGrow: 0,
+    alignSelf: 'center',
+    paddingLeft: '15%',
+    paddingRight: '15%',
+  },
+  summary: {
+    justifyContent: 'space-between',
   },
 }));
 
 const Exercise = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matches = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <div className={!matches ? classes.root : classes.rootMobile}>
-      <Accordion>
+      <Accordion className={classes.accordion}>
         <AccordionSummary
+          className={classes.summary}
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -62,8 +75,11 @@ const Exercise = (props) => {
             <b>{props.title}</b>
           </Typography>
         </AccordionSummary>
-        <AccordionDetails className={classes.accordion}>
-          <ReactPlayer url={props.videoURL} />
+        <AccordionDetails className={classes.details}>
+          <ReactPlayer
+            url={props.videoURL}
+            style={{ slignSelf: 'center', justifyContent: 'center' }}
+          />
         </AccordionDetails>
       </Accordion>
     </div>
@@ -71,3 +87,5 @@ const Exercise = (props) => {
 };
 
 export default Exercise;
+
+// The Exercise component will be a ListItem with an Accordion inside of it.

@@ -26,13 +26,11 @@ const ExerciseList = (props) => {
       {exercises.map((exercise) => {
         console.log(exercise);
         return (
-          <div>
-            <Exercise
-              key={exercise.exerciseID}
-              title={exercise.title}
-              videoURL={exercise.videoURL}
-            />
-          </div>
+          <Exercise
+            key={exercise.exerciseID}
+            title={exercise.title}
+            videoURL={exercise.videoURL}
+          />
         );
       })}
     </div>

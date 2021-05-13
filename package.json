@@ -24,5 +24,6 @@
     "concurrently": "^6.0.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "proxy": "https://localhost:5000"
 }
